@@ -1,5 +1,5 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 # Create your views here.
 def introduction(request):
-    return HttpResponse ('This is Gallery')
+    return render (request,'first.html')
