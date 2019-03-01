@@ -32,13 +32,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'gallery.apps.GalleryConfig',
-    'bootstrap3',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrap3',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +77,10 @@ WSGI_APPLICATION = 'art.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mapicha',
+        'USER':'derrick',
+        'PASSWORD':'database',
     }
 }
 
@@ -107,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
