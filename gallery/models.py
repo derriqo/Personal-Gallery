@@ -9,8 +9,8 @@ class Category(models.Model):
     cat_name = models.CharField(max_length =30)
     
 class Image(models.Model):
-    picha = models.ImageField(upload_to = 'articles/', null = True)
-    picha_name = models.CharField(max_length =30)
+    image = models.ImageField(upload_to = 'articles/', null = True)
+    image_name = models.CharField(max_length =30)
     description = models.CharField(max_length =100)
     location = models.ForeignKey(Location , null = True)
     category = models.ManyToManyField(Category)
