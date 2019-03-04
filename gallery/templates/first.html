@@ -4,8 +4,9 @@
 
 <h2>The App for your Favorite Shots</h2>
 {% for img in images %}
-<div><img src="{{img.image.url}}" alt="" style="width:400px; height:400px;"></div>
+<div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text"><img src="{{img.image.url}}"  style="width:400; height:400;" class="img-responsive" alt="Image"></div>
 
 {% endfor %}
 
 {% endblock %}
+

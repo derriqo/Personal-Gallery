@@ -28,3 +28,9 @@ class Image(models.Model):
     def get_image(cls):
         images=cls.objects.all()
         return images    
+
+    @classmethod
+    def search_by_category(cls,category):
+        photo = cls.objects.filter(cat_name__icontains=search_term)
+        return cls.objects.filter(category_id = photo_id)
+    
