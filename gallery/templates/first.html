@@ -1,5 +1,11 @@
 {%extends 'album/base.html'%}
-<h2>Ile html ya kwanza</h2>
+{% load static %}
 {% block content %}
-{{block.super}}
+
+<h2>The App for your Favorite Shots</h2>
+{% for img in images %}
+<div><img src="{{img.image.url}}" alt="" style="width:400px; height:400px;"></div>
+
+{% endfor %}
+
 {% endblock %}
