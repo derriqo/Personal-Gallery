@@ -15,7 +15,7 @@ class Category(models.Model):
         return self.cat_name
     
 class Image(models.Model):
-    image = models.ImageField(upload_to = 'articles/', null = True)
+    image = models.ImageField(upload_to = 'pictures/', null = True)
     image_name = models.CharField(max_length =30)
     description = models.CharField(max_length =100)
     location = models.ForeignKey(Location , null = True)
