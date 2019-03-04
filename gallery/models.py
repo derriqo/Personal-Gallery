@@ -20,3 +20,6 @@ class Image(models.Model):
     description = models.CharField(max_length =100)
     location = models.ForeignKey(Location , null = True)
     category = models.ManyToManyField(Category)
+
+    def __str__(self):
+        return self.image_name
