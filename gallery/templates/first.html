@@ -1,9 +1,9 @@
-{%extends 'album/base.html'%}
+{% extends 'album/base.html' %}
 {% load static %}
 {% block content %}
 <div class="container">
     <div class="row">
-        <h2>The App for your Favorite Shots</h2>
+        <h2 style="font-family: 'Marck Script', cursive; font-size: 50px; color: ghostwhite ">“A photograph is a secret about a secret. The more it tells you the less you know.” — Diane Arbus</h2>
 {% for img in images %}
 <div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text"><img src="{{img.image.url}}"  style="width: 400px; height:300px;margin-bottom: 25px;" class="img-responsive" alt="Image"></div>
 

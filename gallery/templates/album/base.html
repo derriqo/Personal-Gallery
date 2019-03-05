@@ -5,20 +5,25 @@
 <head>
   <meta charset="utf-8">
 
-  {% if title %}
-  <title>Personal Gallery - {{title}}</title>
-  {% else %}
-    <title> Personal Gallery </title>
-  {% endif %}
 
+  <title>Personal Gallery </title>
+  
   {% block styles %}
   {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/pics.css' %}">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Marck+Script|Monoton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amaranth|Marck+Script|Monoton" rel="stylesheet">
 {% endblock %}
 
 </head>
-<body style="background-image:colour green">
+<body style=" background:linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);">
   {% include "navbar.html" %} 
-    {% block content %} <h1>Mapics</h1> {%endblock%}
+
+    {% block content %} 
+    
+    {%endblock%}
+
     {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      {% bootstrap_javascript %}

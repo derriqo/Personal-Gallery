@@ -2,7 +2,9 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="{% url 'introduction' %}"><h1>BluBird's Gallery</h1></a>
+      <a class="navbar-brand" href="{% url 'introduction' %}"><h1 style="font-family: 'Marck Script', cursive;
+        font-family: 'Monoton', cursive;
+        font-family: 'Amaranth', sans-serif;color: white">BluBird's Gallery</h1></a>
       <!-- <a class="navbar-brand" href="{% url 'introduction' %}">BluBird's Gallery</a> -->
     </div>
   </div>
@@ -11,7 +13,7 @@
     <form class="navbar-form" role="search" action="{% url 'search_results' %}">
 
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search Category" name="image">
+        <input type="text" class="form-control" placeholder="Search Category eg Food,Nature.." name="image">
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
         </div>
