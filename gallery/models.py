@@ -25,20 +25,25 @@ class Image(models.Model):
     image_name = models.CharField(max_length =30)
     description = models.CharField(max_length =100)
     location = models.ForeignKey(Location , null = True)
-    category = models.ManyToManyField(Category)
+    img_category = models.ManyToManyField(Category)
+
+    def __str__(self):
+        return self.image_name
 
     def save_image(self):
-        '''
-        This function is used to save the instance of this class
-        '''
         self.save()
 
     def delete_image(self):
         self.delete()
 
+    @classmethod
+    def retrieve_all(cls):
+        all_objects = Image.objects.all()
+        for item in all_objects:
+            return item
 
-    def __str__(self):
-        return self.image_name
+
+    
 
     @classmethod
     def get_image(cls):
@@ -47,5 +52,6 @@ class Image(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        photo = cls.objects.filter(cat_name__icontains=search_term)
-        return cls.objects.filter(category_id = photo_id)
+        search_result = cls.objects.filter(img_category__cat_name__icontains=search_term)
+        return search_result
+
