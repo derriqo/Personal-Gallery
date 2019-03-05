@@ -17,5 +17,5 @@ def search_results(request):
         return render(request, 'album/search.html',{"message":message,"images": searched_images})
 
     else:
-        message = "You haven't searched for any "
+        message = "You haven't searched for any Image"
         return render(request, 'album/search.html',{"message":message})

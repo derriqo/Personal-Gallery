@@ -5,7 +5,37 @@
     <div class="row">
         <h2 style="font-family: 'Marck Script', cursive; font-size: 50px; color: ghostwhite ">“A photograph is a secret about a secret. The more it tells you the less you know.” — Diane Arbus</h2>
 {% for img in images %}
-<div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text"><img src="{{img.image.url}}"  style="width: 400px; height:300px;margin-bottom: 25px;" class="img-responsive" alt="Image"></div>
+<div class="col-md-3 col-sm-4 col-xs-12 single_portfolio_text">
+    <img src="{{img.image.url}}" data-toggle="modal" data-target="#myModal{{img.id}}"  style="width: 400px; height:300px;margin-bottom: 25px;border-radius: 20%" class="img-responsive" alt="Image"></div>
+
+{% endfor %}
+
+{%  for img in images %}
+  
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal{{img.id}}" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="font-family: 'Marck Script', cursive; font-size: 50px; "><strong>Name : </strong>{{img.image_name}} </h4>
+        </div>
+        <div class="modal-body">
+                <img src="{{img.image.url}}" style="border-radius: 20%" class="img-responsive" alt="Image">
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <h2 style="text-align: left ; font-family: 'Marck Script', cursive; font-size: 50px;"><strong>Description : </strong>{{img.description}} </h2>
+          <h2 style="text-align: left ; font-family: 'Marck Script', cursive; font-size: 50px;"><strong>Category : </strong>{{img.img_category}} </h2>
+          <h2 style="text-align: left ; font-family: 'Marck Script', cursive; font-size: 50px;"><strong>Location : </strong>{{img.location}} </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endfor %}
 
