@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
+from django.db import models
 from .models import Image
 # Create your views here.
 def introduction(request):
-    images =Image.get_image()
+    images =Image.objects.all()
     return render(request,'first.html', {"images":images})
 
 def search_results(request):
@@ -16,5 +17,5 @@ def search_results(request):
         return render(request, 'album/search.html',{"message":message,"images": searched_images})
 
     else:
-        message = "You haven't searched for any term"
+        message = "You haven't searched for any category"
         return render(request, 'album/search.html',{"message":message})
