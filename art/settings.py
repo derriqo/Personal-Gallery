@@ -54,9 +54,8 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -108,14 +107,14 @@ WSGI_APPLICATION = 'art.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'photogal',
-        'USER':'derrick',
-        'PASSWORD':'database',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'photogal',
+#         'USER':'derrick',
+#         'PASSWORD':'database',
+#     }
+# }
 
 
 # Password validation
