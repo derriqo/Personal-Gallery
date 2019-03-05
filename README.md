@@ -17,28 +17,23 @@
 
 The application allows the user to:
 
-* See the pitches other people have posted.
+* View different photos that interest them.
 
-* Vote on the pitch they liked and give it a downvote or upvote.
+* Click on a single photo to expand it and also view the details of the photo.
 
-* Be signed in for me to leave a comment
+* Search for different categories of photos
 
-* Receive a welcoming email once I sign up.
+* Copy a link to the photo to share with their friends.
 
-* View the pitches I have created in my profile page.
+* View photos based on thr location they were taken.
 
-* Comment on the different pitches and leave feedback.
-
-* Submit a pitch in any category.
-
-* View the different categories.
 
 ## Technologies
 ---
 Project is created with:
 * Python 3.6
 * Prerequisites:   *Pip *SQLAlchemy
-* Flask
+* Django
 
 ## Setup
 ---
@@ -52,7 +47,7 @@ To run this project, please follow the following instructions.
 ---
 * In your terminal:
         
-        $ git clone https://github.com/derriqo/OneMinutePitch/
+        $ git clone https://github.com/derriqo/Personal-Gallery
         $ cd OneMinutePitch
 
 ## Running the Application
@@ -74,15 +69,13 @@ To run this project, please follow the following instructions.
 **User Story**
 As a user i want to be able to submit a one minute pitche and other users are able to vote on them and leave comments to give their feedback on them.
 
-| Behaviour | Output |
+| Input | Output |
 | :---------------- | :---------------: | 
-| Page Opens | One Minute Pitch Title  |
-| Landing Page | Display app instructions |
-| Signing in Option | User clicks to sign in |
-| Display login and Sign up form | Log in or Create Account |
-| Display user profile |  Logs into the account |
-| User selects pitches| Able to see select pitches |
-| Leave Application | Sign Out of application|
+| Page Opens | Landing page displays  |
+| ------ | Page loads and images are displayed |
+| User clicks on search bar to input category | Image Category displays |
+| User clicks on Image |  Details of the image are displayed  |
+| User clicks on Image link| Link of the image is saved in the clipboard |
 
 
 ## Support and contact details
