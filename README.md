@@ -67,7 +67,7 @@ To run this project, please follow the following instructions.
 ---
 
 **User Story**
-As a user i want to be able to submit a one minute pitche and other users are able to vote on them and leave comments to give their feedback on them.
+As a user i want to beable to view posted photos .
 
 | Input | Output |
 | :---------------- | :---------------: | 
