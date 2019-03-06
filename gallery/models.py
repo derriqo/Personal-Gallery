@@ -5,8 +5,7 @@ from django.db import models
 class Location(models.Model):
     place = models.CharField(max_length =30)
 
-    def __str__(self):
-        return self.place
+
 
     def save_location(self):
         self.save()
@@ -14,27 +13,30 @@ class Location(models.Model):
     def delete_location(self):
         self.delete()
 
+    def __str__(self):
+        return self.place
+
 class Category(models.Model):
     cat_name = models.CharField(max_length =30)
 
-    def __str__(self):
-        return self.cat_name
+  
 
     def save_category(self):
         self.save()
 
     def delete_category(self):
         self.delete()
+
+    def __str__(self):
+        return self.cat_name    
     
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pictures/', null = True)
     image_name = models.CharField(max_length =30)
     description = models.CharField(max_length =100)
-    location = models.ForeignKey(Location , null = True)
+    picha_location = models.ForeignKey(Location , null = True)
     img_category = models.ManyToManyField(Category)
 
-    def __str__(self):
-        return self.image_name
 
     def save_image(self):
         self.save()
@@ -64,5 +66,10 @@ class Image(models.Model):
         images=cls.objects.all()
         return images    
 
+    @classmethod
+    def filter_by_location(cls,location):
+        filtered_result = cls.object.filter(picha_location__place__icontains=location)
+        return filtered_result
 
-   
+    def __str__(self):
+        return self.image_name  

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http  import HttpResponse,Http404
 from django.db import models
-from .models import Image
+from .models import Image,Location
 # Create your views here.
 def introduction(request):
     images =Image.objects.all()
@@ -19,3 +19,8 @@ def search_results(request):
     else:
         message = "You haven't searched for any Image"
         return render(request, 'album/search.html',{"message":message})
+
+def get_location(request,location):
+    location_results = Location.objects.all()
+    location_result = Image.objects.filter(picha_location__place)
+    return render(request,'first.html',{'images':location_result,'location_results':location_results})
